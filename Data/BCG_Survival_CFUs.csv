@@ -1,0 +1,178 @@
+﻿Mouse,Organ,Timepoint,CFU
+Fej,Lung,30,3.54
+Fej,Lung,30,0.4
+Fej,Lung,30,0
+Fej,Lung,30,0
+Fej,Lung,30,0.4
+Ouj,Lung,30,2.71
+Ouj,Lung,30,2.53
+Ouj,Lung,30,0
+Ouj,Lung,30,0
+Ouj,Lung,30,2.07
+BL6,Lung,30,0.4
+BL6,Lung,30,0
+BL6,Lung,30,0
+BL6,Lung,30,0
+BL6,Lung,30,1.89
+NOS,Lung,30,0.4
+NOS,Lung,30,4.02
+NOS,Lung,30,2.33
+NOS,Lung,30,0
+NOS,Lung,30,0
+Fej,Spleen,30,3.01
+Fej,Spleen,30,2.78
+Fej,Spleen,30,2.62
+Fej,Spleen,30,1.94
+Fej,Spleen,30,2.42
+Ouj,Spleen,30,1.44
+Ouj,Spleen,30,1.51
+Ouj,Spleen,30,2.22
+Ouj,Spleen,30,2.41
+Ouj,Spleen,30,1.72
+BL6,Spleen,30,1.35
+BL6,Spleen,30,2.58
+BL6,Spleen,30,2.72
+BL6,Spleen,30,2.53
+BL6,Spleen,30,2.38
+NOS,Spleen,30,3.97
+NOS,Spleen,30,4.9
+NOS,Spleen,30,4.44
+NOS,Spleen,30,3.85
+NOS,Spleen,30,2.48
+Fej,Bone Marrow,30,0
+Fej,Bone Marrow,30,0.1
+Fej,Bone Marrow,30,0.8
+Fej,Bone Marrow,30,0
+Fej,Bone Marrow,30,0
+Ouj,Bone Marrow,30,0
+Ouj,Bone Marrow,30,0
+Ouj,Bone Marrow,30,0.1
+Ouj,Bone Marrow,30,0.1
+Ouj,Bone Marrow,30,0.4
+BL6,Bone Marrow,30,0
+BL6,Bone Marrow,30,0
+BL6,Bone Marrow,30,1
+BL6,Bone Marrow,30,0
+BL6,Bone Marrow,30,0
+NOS,Bone Marrow,30,0
+NOS,Bone Marrow,30,1.46
+NOS,Bone Marrow,30,1.35
+NOS,Bone Marrow,30,0.7
+NOS,Bone Marrow,30,1.3
+Fej,Lung,90,0
+Fej,Lung,90,2.12
+Fej,Lung,90,0
+Fej,Lung,90,0
+Fej,Lung,90,3.14
+Ouj,Lung,90,0
+Ouj,Lung,90,2
+Ouj,Lung,90,0
+Ouj,Lung,90,0
+Ouj,Lung,90,2.51
+BL6,Lung,90,0.4
+BL6,Lung,90,0.4
+BL6,Lung,90,0
+BL6,Lung,90,0
+BL6,Lung,90,0.7
+NOS,Lung,90,1.82
+NOS,Lung,90,3.29
+NOS,Lung,90,0.88
+NOS,Lung,90,3.9
+NOS,Lung,90,3.06
+Fej,Spleen,90,2.92
+Fej,Spleen,90,4.11
+Fej,Spleen,90,3.3
+Fej,Spleen,90,2.666
+Fej,Spleen,90,2.97
+Ouj,Spleen,90,2.86
+Ouj,Spleen,90,3.37
+Ouj,Spleen,90,3.62
+Ouj,Spleen,90,0.88
+Ouj,Spleen,90,2.73
+BL6,Spleen,90,3.57
+BL6,Spleen,90,3.24
+BL6,Spleen,90,2.48
+BL6,Spleen,90,2.65
+BL6,Spleen,90,3.13
+NOS,Spleen,90,2.87
+NOS,Spleen,90,3.88
+NOS,Spleen,90,1
+NOS,Spleen,90,4.64
+NOS,Spleen,90,6.29
+Fej,Bone Marrow,90,0
+Fej,Bone Marrow,90,0
+Fej,Bone Marrow,90,0
+Fej,Bone Marrow,90,0
+Fej,Bone Marrow,90,0
+Ouj,Bone Marrow,90,0
+Ouj,Bone Marrow,90,0
+Ouj,Bone Marrow,90,0
+Ouj,Bone Marrow,90,0
+Ouj,Bone Marrow,90,0
+BL6,Bone Marrow,90,0
+BL6,Bone Marrow,90,0
+BL6,Bone Marrow,90,0
+BL6,Bone Marrow,90,0
+BL6,Bone Marrow,90,0
+NOS,Bone Marrow,90,0
+NOS,Bone Marrow,90,0.88
+NOS,Bone Marrow,90,0
+NOS,Bone Marrow,90,1.18
+NOS,Bone Marrow,90,0
+BL6,Lung,150,0
+BL6,Lung,150,0
+BL6,Lung,150,0.7
+BL6,Lung,150,0
+BL6,Lung,150,0.7
+NOS,Lung,150,1.72
+NOS,Lung,150,2.81
+NOS,Lung,150,3.74
+NOS,Lung,150,4.33
+BL6,Spleen,150,3.1
+BL6,Spleen,150,3.45
+BL6,Spleen,150,3.2
+BL6,Spleen,150,2.98
+BL6,Spleen,150,3.8
+NOS,Spleen,150,5.39
+NOS,Spleen,150,4.94
+NOS,Spleen,150,6.37
+NOS,Spleen,150,6.94
+BL6,Bone Marrow,150,0
+BL6,Bone Marrow,150,0
+BL6,Bone Marrow,150,0.4
+BL6,Bone Marrow,150,0
+BL6,Bone Marrow,150,0.7
+NOS,Bone Marrow,150,0
+NOS,Bone Marrow,150,1.18
+NOS,Bone Marrow,150,2.82
+NOS,Bone Marrow,150,2.87
+Fej,Lung,150,0
+Fej,Lung,150,0
+Fej,Lung,150,0
+Fej,Lung,150,0
+Fej,Lung,150,3.65
+Ouj,Lung,150,0
+Ouj,Lung,150,0
+Ouj,Lung,150,0.4
+Ouj,Lung,150,0
+Ouj,Lung,150,0
+Fej,Spleen,150,3.24
+Fej,Spleen,150,2.08
+Fej,Spleen,150,2.21
+Fej,Spleen,150,2.07
+Fej,Spleen,150,2.77
+Ouj,Spleen,150,3.3
+Ouj,Spleen,150,3.22
+Ouj,Spleen,150,2.62
+Ouj,Spleen,150,3.17
+Ouj,Spleen,150,3.44
+Fej,Bone Marrow,150,0
+Fej,Bone Marrow,150,0
+Fej,Bone Marrow,150,0
+Fej,Bone Marrow,150,0
+Fej,Bone Marrow,150,0
+Ouj,Bone Marrow,150,0
+Ouj,Bone Marrow,150,0
+Ouj,Bone Marrow,150,0
+Ouj,Bone Marrow,150,0
+Ouj,Bone Marrow,150,0

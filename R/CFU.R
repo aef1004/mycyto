@@ -13,6 +13,11 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
+# How to load into environment
+# source("./R/CFU.R")
+
+
+# Load data ----------------------------------------------
 library(readr)
 library(dplyr)
 library(stats)
@@ -21,14 +26,18 @@ library(ggpubr)
 library(broom)
 library(purrr)
 library(tidyr)
+# -------------------------------------------------------
 
-tidy_CFU_data <- function(csv) {
+# tidy up the excel file
+tidy_CFU_data <- function(csv, group_names) {
   read_csv(csv) %>%
     rename(Day = Timepoint) %>%
     group_by(Organ, Day) %>%
     mutate(Mouse = factor(Mouse, levels = group_names))
 
 }
+
+# example:  tidy_CFU <- tidy_CFU_data("./Data/BCG_Survival_CFUs.csv", c("Fej", "Ouj", "BL6", "NOS"))
 
 aov_tukey <- function(tidy_data) {
   tidy_data %>%
@@ -39,6 +48,7 @@ aov_tukey <- function(tidy_data) {
     unnest(tidy_tukey, .drop = TRUE)
 }
 
+# Find significance of anova results -------------------------------
 find_signif <- function(anova_results) {
 
   signif_data <- anova_results %>%
@@ -52,8 +62,10 @@ find_signif <- function(anova_results) {
 
   print(signif_data)
 }
+# -----------------------------------------------------------
 
-plot_CFU <- function(tidied_data, signif_data) {
+# Plot data -------------------------------------------------
+plot_CFU <- function(tidy_data, signif_data) {
 
   ggline(x = "Mouse", y = "CFU", color = "Mouse", alpha = 0.5,
          add = c("mean_se", "jitter"), data = tidy_CFU,
@@ -71,4 +83,4 @@ plot_CFU <- function(tidied_data, signif_data) {
 
 }
 
-
+# -------------------------------------------------------

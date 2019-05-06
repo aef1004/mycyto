@@ -69,7 +69,7 @@ plot_CFU <- function(tidy_data, signif_data) {
     stat_pvalue_manual(data = signif_data,
                        label = "star",
                        xmin = "group1", xmax = "group2",
-                       y.position = c(5, 6.25, 7.25)) +
+                       y.position = c(max(CFU), 6.25, 7.25)) +
     xlab("Mouse Strain") +
     ylab("log 10 CFU") +
     ylim(0,8) +

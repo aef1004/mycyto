@@ -36,10 +36,6 @@ clean_FCS <- function(fcs_file) {
            `CXCR5` = "PerCP.eFluor.710.A")
 }
 
-phenotype_heatmap <- function(csv_file, population_no, title) {
-  pheatmap(csv_file, cluster_rows = FALSE, cluster_cols = FALSE,
-           labels_row = paste("Pop", population_no), main = title)
-}
 
 feature_cut <- function(fcs_file) {
   clean_FCS(fcs_file) %>%

@@ -28,13 +28,16 @@ library(purrr)
 library(tidyr)
 # -------------------------------------------------------
 
-# example: tidy_CFU_aov("./Data/BCG_Survival_CFUs.csv", c("Fej", "Ouj", "BL6", "NOS"))
 # tidy up the excel file
-tidy_CFU_aov <- function(csv, group_names) {
+tidy_CFU <- function(csv, group_names) {
   read_csv(csv) %>%
     rename(Day = Timepoint) %>%
     group_by(Organ, Day) %>%
-    mutate(Mouse = factor(Mouse, levels = group_names)) %>%
+    mutate(Mouse = factor(Mouse, levels = group_names))
+}
+
+tidy_aov <- function(CFU_tidied) {
+  CFU_tidied %>%
     nest() %>%
     mutate(aov_result = map(data, ~aov(CFU ~ Mouse, data = .x)),
            tukey_result = map(aov_result, TukeyHSD),
@@ -69,18 +72,15 @@ plot_CFU <- function(tidy_data, signif_data) {
     stat_pvalue_manual(data = signif_data,
                        label = "star",
                        xmin = "group1", xmax = "group2",
-                       y.position = c(max(CFU), 6.25, 7.25)) +
+                       y.position = c(max(tidy_data$CFU) -.5, max(tidy_data$CFU) + 0.25, max(tidy_data$CFU) + 1)) +
     xlab("Mouse Strain") +
     ylab("log 10 CFU") +
-    ylim(0,8) +
+    ylim(0,8.5) +
     theme_bw()
 
 }
 
-# -------------------------------------------------------
-
-# Example of how to use
-
-# tidy_aov <- tidy_CFU_aov("./Data/BCG_Survival_CFUs.csv", c("Fej", "Ouj", "BL6", "NOS"))
-# signif <- find_signif(tidy_aov)
-# plot_CFU(tidy_aov, signif)
+# tidy_CFU_file <- tidy_CFU("./Data/BCG_Survival_CFUs.csv", c("Fej", "Ouj", "BL6", "NOS"))
+# aov_comp <- tidy_aov(tidy_CFU_file)
+# signif <- find_signif(aov_comp)
+# plot_CFU(tidy_CFU_file, signif)

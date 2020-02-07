@@ -1,3 +1,4 @@
+library(ggplot2)
 StatSmoothFunc <- ggproto("StatSmooth", Stat,
 
                           setup_params = function(data, params) {

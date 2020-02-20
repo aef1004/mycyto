@@ -1,5 +1,11 @@
-#this is a function that I adapted from <https://github.com/RGLab/openCyto/blob/0ec1218427627b9ee092f8d39e6ab46d46e7e2f8/R/bayes-flowClust.R> the difference between the original mindensity function and mine is that the original only works with a flowframe, while mine performs the same function on a dataframe. Mine also prints out the cutpoint so we can see it.
+#' this is a function that I adapted from <https://github.com/RGLab/openCyto/blob/0ec1218427627b9ee092f8d39e6ab46d46e7e2f8/R/bayes-flowClust.R> the difference between the original mindensity function and mine is that the original only works with a flowframe, while mine performs the same function on a dataframe. Mine also prints out the cutpoint so we can see it.
 
+
+#' @param df data frame that contains the data to find the minimum density between peaks
+#' @param channel the marker channel to find the minimum density between peaks
+#'
+#' @export
+#'
 gate_mindensity_amy <- function(df, channel, filterId = "", positive = TRUE,
                                 pivot = FALSE, gate_range = NULL, min = NULL, max = NULL,
                                 peaks = NULL, ...) {

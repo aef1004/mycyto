@@ -1,3 +1,11 @@
+
+#'`statSmoothFunc`: modified from <https://gist.github.com/kdauria/524eade46135f6348140> to add $r^2$ to
+#'correlation plots to correlation plots [Amy, for these modified functions, we should consider giving them
+#'different names, so that if we put these in a package and someone else loads this and the package with the
+#'original function, there won't be conflicts from two functions from separate packages having the same name.
+#' Maybe add `corr` or `r2` to the end of the functoin names?]
+#' @export
+#'
 library(ggplot2)
 StatSmoothFunc <- ggproto("StatSmooth", Stat,
 

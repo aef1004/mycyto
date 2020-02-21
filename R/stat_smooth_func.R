@@ -1,4 +1,15 @@
-# taken from https://gist.github.com/kdauria/524eade46135f6348140
+#' taken from https://gist.github.com/kdauria/524eade46135f6348140
+#'
+#' - `stat_smooth_func`: modified from <https://gist.github.com/kdauria/524eade46135f6348140> pull out $r^2$
+#' for correlation plots [Amy, For this and the previous function, do you think it would be easier for us to
+#' create these modified versions by adding a `geom_text` or `geom_label` line to a ggplot object, instead,
+#' rather than changing the geoms for the smooth functions?]
+
+
+#'
+#' @export
+#'
+#'
 stat_smooth_func <- function(mapping = NULL, data = NULL,
                              geom = "smooth", position = "identity",
                              ...,

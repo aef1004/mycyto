@@ -3,13 +3,10 @@ Type: Package
 Title: Analyze flow cytometry data with feature engineering
 Version: 0.1.0
 Author: person("Amy", "Fox", email = amyfox@colostate.edu, role = c("aut", "cre"))
-Description: Allows users to perform end-to-end analysis of flow cytometry data. It utilizes FMOs 
-or clear separation between populations to transform the continuous data into binary data. From 
-this point, easy-to-understand plots are created for the data. The modular nature of the 
-pipeline further allows for customization of statistical testing, adoption of alternative initial 
-gating steps, and incorporation of other datasets. This works was supported by National 
-Institute of Health grant 1R01 AI127475-01A1 and partially supported by a National Science 
-Foundation grant (DGE-1450032). 
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Allows users to perform end-to-end analysis of flow cytometry data. 
+    It utilizes FMOs or clear separation between populations to transform the continuous data into binary data. From this point, easy-to-understand plots are created for the data. The modular nature of the pipeline further allows for customization of statistical testing, adoption of alternative initial gating steps, and incorporation of other datasets. 
+    This works was supported by National Institute of Health grant 1R01 AI127475-01A1 and partially supported by a National Science Foundation grant (DGE-1450032). 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true

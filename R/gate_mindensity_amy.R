@@ -70,6 +70,14 @@ gate_mindensity_amy <- function(df, channel, filterId = "", positive = TRUE,
   rectangleGate(gate_coordinates, filterId = filterId)
 
   # I added in the print(cutpoint)
+
   print(cutpoint)
+
+  # cutpoint_df <- data.frame()
+  #
+  # cutpoint_df %>%
+  #   rbind(cutpoint)
+  #
+  # print(cutpoint_df)
 
 }

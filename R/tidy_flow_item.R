@@ -1,3 +1,5 @@
+#' Convert flowframe to tidy dataframe
+#'
 #' @param flowSet the flowset in which to convert to a tidy flow set
 
 # Create a function that applies this to all items in a 'flowSet' object

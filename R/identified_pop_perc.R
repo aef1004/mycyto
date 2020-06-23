@@ -2,21 +2,18 @@
 #'
 #' This function
 #'
-#' @param df1 dataframe that contains the populations you want to look at (phenotype_data)
+#' @param df1 dataframe that contains the populations you want to look at (phenotype_data or sampled_data)
 #' @param df2 dataframe that contains (all_gated)
+#' @param marker_vector vector that contains the markers columns that make up the populations
 #'
-#' @example sample_populations_all_groups <- identified_pop_perc(df1 = phenotype_data, df2 = all_gated)
+#' @example sample_populations_all_groups <- identified_pop_perc(df1 = phenotype_data, df2 = all_gated, marker_vector = order_of_markers)
 #' @export
 
 
-identified_pop_perc <- function(df1, df2) {
-
-  # convert the marker columns of factor class into numeric
-  df2 <- df2 %>%
-    mutate_if(is.factor, ~as.numeric.factor(.))
+identified_pop_perc <- function(df1, df2, marker_vector) {
 
   # add the percentages from original data to the populations of filtered data
-  add_perc <- left_join(df1, df2)
+  add_perc <- left_join(df1, df2, by = marker_vector)
 
   # expand the data so can see which files have 0 cells in a phenotype
   all_options <- expand(add_perc, population, filename)

@@ -2,26 +2,32 @@
 #'
 #' This function
 #'
-#' @param df1 dataframe that contains the populations you want to look at (sample_populations)
+#' @param df1 dataframe that contains the populations you want to look at (phenotype_data)
 #' @param df2 dataframe that contains (all_gated)
-#'@export
+#'
+#' @example sample_populations_all_groups <- identified_pop_perc(df1 = phenotype_data, df2 = all_gated)
+#' @export
 
 
-identified_pop_perc <- function(sample_populations, all_gated) {
+identified_pop_perc <- function(df1, df2) {
 
-  # add in the percentage of cells in each specific population after the filter
-  test <- left_join(sample_populations, all_gated)
+  # convert the marker columns of factor class into numeric
+  df2 <- df2 %>%
+    mutate_if(is.factor, ~as.numeric.factor(.))
 
-  # expand to add in the data where a mouse may have 0 cells in a certain population identified after the filter
-  all_options <- expand(test, population, filename)
+  # add the percentages from original data to the populations of filtered data
+  add_perc <- left_join(df1, df2)
 
-  # add in the population information
-  add_pops <- left_join(all_options, sample_populations)
+  # expand the data so can see which files have 0 cells in a phenotype
+  all_options <- expand(add_perc, population, filename)
 
-  # add populations to the original gated data and replace NA percentages with 0
-  sample_populations_all_groups <- left_join(add_pops, all_gated) %>%
+  # add the populations back
+  add_pops <- left_join(all_options, df1)
+
+  # add the percentages back
+  sample_populations_all_groups <- left_join(add_pops, df2) %>%
     select(population, filename, percentage) %>%
-    mutate_all(list(~tidyr::replace_na(.,0)))
+    mutate_all(list(~replace_na(., 0)))
 
   return(sample_populations_all_groups)
 }

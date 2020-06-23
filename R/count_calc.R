@@ -12,7 +12,7 @@
 count_calc <- function(df, marker_vector =NULL) {
   df %>%
   mutate_at(vars(-group_cols()), list(~tidyr::replace_na(.,0))) %>%
-  group_by_(marker_vector, "filename") %>%
+  group_by(marker_vector, "filename") %>%
   dplyr::mutate(cell_no = n()) %>%
   unique() %>%
   ungroup() %>%

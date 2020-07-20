@@ -14,7 +14,7 @@
 fe <- function(quantile_df, marker, marker_name) {
 
   find_quantile <- quantile_df %>%
-    filter(filename == marker_name) %>%
+    dplyr::filter(filename == marker_name) %>%
     select(quantile_99)
 
   cut(marker, breaks = c(min(marker), find_quantile, max(marker)),

@@ -7,8 +7,8 @@
 #' @example # convert dataframe with various
 #' @export
 #'
-fe_min_density <- function(marker, marker_name) {
-   cut(marker, breaks = c(min(marker), gate_mindensity_amy(all_gated_df, marker_name), max(marker)),
+fe_min_density <- function(df, marker, marker_name) {
+   cut(marker, breaks = c(min(marker), gate_mindensity_amy(df, marker_name), max(marker)),
                         labels = c(0, 1))
  }
 

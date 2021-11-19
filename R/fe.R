@@ -5,9 +5,18 @@
 #' @return a numeric for the threshold cutoff point for a particular sample
 #'
 #' @example # convert dataframe with various
-
+#' where add_quantile contains the information for where the quantile is located
+#' all_gated_df %>%
+#' mutate(CD11b = fe(add_quantile, CD11b, "CD11b")
 #'
-#' fe <- function(marker, marker_name) {
-#'   cut(marker, breaks = c(min(marker), quantile(), max(marker)),
-#'      labels = c(0, 1))
-#'}
+#' @export
+
+fe <- function(quantile_df, marker, marker_name) {
+
+  find_quantile <- quantile_df %>%
+    dplyr::filter(filename == marker_name) %>%
+    select(quantile_99)
+
+  cut(marker, breaks = c(min(marker), find_quantile, max(marker)),
+      labels = c(0, 1))
+}
